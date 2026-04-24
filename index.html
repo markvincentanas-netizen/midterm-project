@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Midterm Exam</title>
+
+    <!-- MODERN CSS DESIGN -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #eef2f7;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4a90e2, #007bff);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            background: #1f2a40;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #4a90e2;
+        }
+
+        section {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        article, aside {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        article {
+            flex: 2;
+        }
+
+        aside {
+            flex: 1;
+            background: #f9fafc;
+        }
+
+        .highlight {
+            color: #007bff;
+        }
+
+        #special {
+            color: #555;
+        }
+
+        footer {
+            background: #1f2a40;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .interactive {
+            text-align: center;
+            padding: 20px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 8px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #output, #text {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Student Web System</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <section>
+        <article>
+            <h2 class="highlight">Welcome</h2>
+            <p id="special">This page demonstrates HTML, CSS, and JavaScript functions.</p>
+        </article>
+
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Useful links or additional information can go here.</p>
+        </aside>
+    </section>
+
+    <!-- INTERACTIVE SECTION -->
+    <div class="interactive">
+        <h3 id="info"></h3>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <br><br>
+
+        <input type="text" id="userInput" placeholder="Enter something">
+        <button onclick="displayInput()">Submit</button>
+
+        <p id="output"></p>
+
+        <button id="changeTextBtn">Change Text</button>
+        <p id="text">Original Text</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Student Web System</p>
+    </footer>
+
+    <!-- REQUIRED LINKS -->
+    <!--
+    GitHub Link: https://github.com/yourusername/midterm-project
+    Neocities Link: https://yourusername.neocities.org
+    -->
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let name = "Mark Vincent Anas";
+        let course = "BSIT";
+
+        document.getElementById("info").innerHTML =
+            "Name: " + name + "<br>Course: " + course;
+
+        function showMessage() {
+            alert("Hello! This is a button alert.");
+        }
+
+        function displayInput() {
+            let input = document.getElementById("userInput").value;
+            document.getElementById("output").innerHTML = input;
+        }
+
+        document.getElementById("changeTextBtn").addEventListener("click", function() {
+            document.getElementById("text").innerHTML = "Text Changed!";
+        });
+    </script>
+
+</body>
+</html>
